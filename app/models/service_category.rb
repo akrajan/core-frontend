@@ -15,7 +15,6 @@ class ServiceCategory
   end
 
   def self.all
-    resp = Service::ServiceCategory.service_categories
-    [resp[SkusListKey], resp[ErrorKey]]
+    Service::ServiceCategory.fetch_service_categories
   end
 end
