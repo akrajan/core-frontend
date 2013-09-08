@@ -15,6 +15,7 @@ group :assets do
   gem 'therubyracer', :platform=>:ruby
 end
 group :development do
+  gem 'debugger'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'guard-bundler'

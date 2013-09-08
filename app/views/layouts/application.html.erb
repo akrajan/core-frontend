@@ -3,6 +3,7 @@
   <%= render partial: "layouts/application_head" %>
   <body class="<%= controller_name %> <%= action_name %> seattle-home-pro city-hardware home">
     <div id="container" class="container ">
+      <%= render :partial => 'layouts/page_header' %>
         <%= yield %>
     </div> <!--! end of #container -->
     <script src="javascript/jquery.js"></script>
