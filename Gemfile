@@ -26,6 +26,7 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
 end
+gem 'faraday'
 gem 'therubyracer'
 gem 'jquery-rails'
 gem 'less-rails-bootstrap'

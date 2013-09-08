@@ -1,0 +1,150 @@
+//
+// calendar.less
+//------------------------------------------
+
+.calendar {
+
+    position: relative;
+    overflow: hidden;
+
+    .mask-overlay {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: @bodyBackground;
+        .opacity(95);
+
+        .progress-wrapper {
+            position: relative;    
+            width: 100%;
+            height: 100%;
+        }
+
+        .progress {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            left: 50%;
+            width: 50%;
+            margin-left: -25%;
+            .box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.7));
+            background: #fff;
+        }
+    }    
+
+    .date-time-selector {
+        position: relative;        
+       
+        .previous, .next {
+           position: absolute;
+           top: 4px;
+           height: 12px;
+           width: 10px;
+           display: block;
+           background: url(../../../images/orange_arrows.gif) 0px 0px no-repeat;
+        }
+        .previous {
+            left: 0;
+        }
+        .next {
+            right: 0;
+            background-position: 0px bottom;
+        }
+
+        .slot.template {
+            display: none;        
+        }
+
+        .previous, .next {
+    //        visibility: hidden;    
+        }
+
+        .slot {
+            float: left;
+            width: 24%;
+            border-right: 1px solid #dce0df;
+            border-left: 1px solid #fff;
+           
+            &:first-child {
+                border-left: none;
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+            .date {
+                min-height: 28px;
+                text-align: center;
+                line-height: 12px;
+                padding-top: 4px;
+            }
+
+            .btn-wrapper {
+                width: 70%;
+                margin: 5px 10%;
+
+                .btn {
+                    width: 100%;
+                    padding: 10px 5%;
+                    color: #fff;
+
+                    &.selected, &.clicked {
+                        background: @orange;
+                        border: 1px solid @orange;
+                        
+                        &:hover {
+                            background: @orange !important;
+                            border: 1px solid @orange !important;
+                            color: #fff !important;
+                        }
+                    }    
+                    &.available {
+                        background: @blue;
+                        border: 1px solid @blue;
+                    }    
+                    &.unavailable {
+                        background: #e2e6e5;
+                        border: 1px solid #e2e6e5;
+                        
+                        &:hover {
+                            background: #e2e6e5 !important;
+                            border: 1px solid #e2e6e5 !important;
+                            color: #fff !important;
+                        }
+                    }
+                    &:hover {    
+                       background: #fff;
+                       border: 1px solid @blue;
+                       color: @blue;
+                    }
+                }
+                
+                &:first-child {    
+                    margin-top: 0;
+                }
+            }
+
+        }
+
+    }
+}
+
+body.seattle-home-pro {
+    .popover {
+        
+        .popover-content {
+          text-align: center;  
+        };
+        
+        .buttons {
+            margin-top: 9px;
+            text-align: center;
+            
+            .btn {
+                margin: 5px 2px;
+            }
+        }
+    }
+}

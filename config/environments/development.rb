@@ -1,3 +1,5 @@
+require 'ostruct'
+
 Presentation::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +36,10 @@ Presentation::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.core_backend = OpenStruct.new
+  config.core_backend.protocol = "http"
+  config.core_backend.url = "ec2-54-245-78-35.us-west-2.compute.amazonaws.com"
+  config.core_backend.port = 8080
+  config.core_backend.base_path = "core-service"
 end

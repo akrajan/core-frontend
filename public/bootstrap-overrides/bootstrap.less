@@ -1,0 +1,589 @@
+/*!
+ * Bootstrap Overrides
+ */
+
+//
+//Variables
+// --------------------------------------------------
+
+@orange:                            #ec8826;
+@blue:                              #397085;
+@bodyBackground:                    #f5f3f0;
+@btnPrimaryBackground:              @orange;
+@btnPrimaryBackgroundHighlight:     @orange;
+@navbarBackground:                  @bodyBackground;
+@navbarBorder:                      darken(@bodyBackground, 12%);
+@navbarText:                        #397085;
+@navbarLinkColor:                   @blue;
+@navbarLinkBackgroundActive:        darken(@bodyBackground, 5%);
+
+
+// Global namespace for all overrides
+body.seattle-home-pro {
+
+    border-top: 3px solid  #ec8826;
+    padding-top: 44px;
+
+    a {
+        color: @blue;
+    }
+
+    .block {
+        display: block;
+    }
+    
+    .black {
+        color: #000;
+    }
+
+    .large {
+        font-size: 25px;
+    }
+
+    //
+    // Buttons
+    // --------------------------------------------------
+
+
+    // Base styles
+    // --------------------------------------------------
+
+    button {
+        //override opera default stylesheet
+        white-space: normal;
+    }
+
+    // Core
+    .btn {
+      border: none;
+      .box-shadow(none);
+      text-shadow: none;
+      padding: 10px 20px;
+      .border-radius(5px);
+      background: @blue;
+      color: #fff;  
+    }
+
+    .btn-primary {
+        background: @orange;
+    }
+
+    .btn-mini {
+      padding: 0 6px;  
+    }    
+
+    //
+    // Navbars
+    // --------------------------------------------------
+
+
+    // COMMON STYLES
+    // -------------
+
+    .navbar {
+        margin-bottom: 0;
+    }
+
+    .navbar .nav {
+      position: absolute;  
+      right: 0;
+      left: auto;
+    }    
+    
+    .navbar .nav > li {
+        float: left;
+        width: auto;
+
+        & > a { 
+            text-shadow: none;
+        }
+
+    }
+   
+    .nav-collapse {
+      
+      .nav > li > a {
+        font-weight: normal;
+        text-align: right;
+        color: @navbarLinkColor; 
+      }
+        
+    }
+    .nav-collapse.collapse {
+      position: relative;  
+    }
+
+
+    // Inner for background effects
+    .navbar-inner {
+      padding: 0;  
+      background: @navbarBackground;  
+      background-image: none !important; 
+      border: none !important;
+      .box-shadow(none);
+
+      .brand {
+        margin-left: 0;    
+        padding-left: 0;    
+      }
+
+    }
+    
+    // Navbar button for toggling navbar items in responsive layouts
+    // These definitions need to come after '.navbar .btn'
+
+    .navbar .btn-navbar {
+        margin: 28px 0 0;
+        background: @navbarLinkColor !important;
+        .box-shadow(none);
+        .border-radius(4px);
+        padding: 7px 10px;        
+
+        .icon-bar {
+             background-color: #fff;
+         }
+
+    }
+
+    //
+    // Seattle Install
+    // ------------------------------------------------
+
+    .blue {
+        color: @blue;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+        font-weight: normal;
+        margin: 25px 0 0;
+        line-height: 22px;
+        min-height: 45px;
+    }    
+
+    h1 {
+        color: @blue;
+    }    
+
+    h2 {
+        color: @orange;
+    }    
+
+    .rule {
+        
+        width: 100%;
+        margin-top: 18px;
+
+        &.blue {
+            border-top: 1px solid #397085;
+        }
+
+    }
+
+    .shp-top-nav {
+        margin-top: 28px;
+    }
+
+    .toggle-list {
+        
+        li {
+            padding: 0;
+            background: #fff;
+            border: 1px solid #e2e6e5;
+            .border-radius(5px);
+            margin-bottom: 6px;
+        }
+
+
+        .header {
+            position: relative;
+            padding: 2px 6px;
+            .border-radius(5px);
+            
+            &.open {
+                background: #397085;
+                color: #fff;
+                
+                .plus-icon {
+                    color: #fff;
+                }
+            }
+
+            .plus-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                padding: 0px 6px;
+                font-weight: bold;
+                color: #EC8826;
+                text-align: right;
+                background: transparent;            
+            }
+        }
+
+        .collapse {
+            padding: 0 6px;
+            background: #e2e6e5;
+            
+            dt {
+                font-weight: normal;
+                color: #000;
+                width: 100px; 
+                text-align: left;
+            }
+            dd {
+                margin-left: 100px;
+                color: #397085;
+            }
+
+            button {
+                float: right;
+                margin: 6px;
+            }
+        }
+
+    }
+
+    .round-badge {
+        margin-right: 5px;    
+        border-radius: 100%;
+        font-weight: bolder;
+
+        &.one {
+            padding: 7px 11px;
+        }
+        &.two {
+            padding: 7px 7px;
+        }
+        &.three {
+            padding: 7px 4px;
+        }
+        
+        &.blue {
+            border: 1px solid #397085;
+            background: #397085;
+            color: #fff;
+        }
+        &.blue-inverted {
+            border: 1px solid #397085;
+            background: #fff;
+        }
+    } 
+
+    //
+    // Provider Co-branded pages (ie City Hardware) 
+    // ------------------------------------------------
+   
+    &.city-hardware {
+     
+        .provider-logo {
+            position: relative;    
+            margin: 50px 0;
+            
+            img {
+                position: absolute;
+                left: 50%;
+                margin-left: -144px;
+                margin-top: -12px;
+                background: #f5f3f0;
+                padding: 0 30px;
+            } 
+        }
+
+        .services-groups {
+            margin-top: 10px;
+        }
+
+        .request-a-homepro {
+            overflow: hidden;
+        }
+
+        .service-request-form {
+            background: #e2e6e5;
+            padding: 24px;
+            border-top: 1px solid #cdd4d2;
+
+            input, textarea {
+                width: 80%;
+            }
+        }
+
+        .schedule-form {
+            label {
+                text-align: left;
+                color: @blue;
+            }
+            .no-margin {
+                
+                .control-label {
+                    width: 100%;
+                }
+
+                .controls {
+                    margin-left: 0 !important;
+                }
+            }    
+
+            input, textarea {
+                width: 90%;
+            }
+
+            #submitRequest {
+                width: 100%;
+            }
+        }
+
+        .service-request-form, .schedule-form {
+            .container {
+                width: 110%;
+
+                & > [class*="span"] {
+                    margin: 0;
+                }
+            }
+     
+            .control-label {
+                width: 36%;
+                padding-top: 0;
+            }
+
+            .controls {
+                margin-left: 40%;
+            }        
+
+        }
+
+        .contractor {
+
+            position: relative;
+            font-size: 12px;
+            white-space: nowrap;
+            
+            img {
+                margin: 0 auto;
+                display: block;
+                margin-bottom: 20px;
+            }
+            
+            .score {
+                position: absolute;
+                bottom: -24px;
+            }
+
+            .tooltip {
+                white-space: normal;
+            }
+        }
+
+        /// Schedule page
+        
+        .reserved-info {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #fff;
+        }
+
+        
+        //
+        // Confirmation page
+        // -------------------------------------------
+        
+        .card {
+
+            margin-top: 10px;
+            max-width: 370px;
+
+            .top {
+                padding: 20px;
+                background: #fff;
+                overflow: hidden;
+             }
+            .bottom {
+                padding: 20px;
+                background: #e2e6e5;
+            }
+            .logo {
+                margin-right: 40px;
+            }
+            .contractor {
+                margin: 20px 0;
+            }
+        }
+
+        .reserved-info {
+            &.confirm {
+                margin-top: 25px;
+                border-top: 1px solid @blue;
+            }
+
+            h2 {
+                min-height: 0;
+                margin: 10px 0;
+                font-size: 16px;
+
+                small {
+                    font-size: 11px;
+
+                }
+                a.change-date {
+                    color: @orange !important;
+                } 
+            }
+        }
+
+        &.confirm {
+            .schedule-form {
+                margin: 0;
+            }
+            .questions {
+                display: inline-block;
+                width: 100%;
+                border-bottom: 1px solid #cfd9db;
+            }
+            .contact-info {
+                padding-top: 10px;
+
+                .btn {
+                    margin: 0 0 10px 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@import "calendar.less";
+@import "barGraph.less";
+
+
+//
+// Responsive
+// ------------------------------------------------
+
+
+.visible-large-desktop {
+    display: none;
+}
+
+.hidden-large-desktop {
+    display: inherit;
+}
+
+@media (min-width: 1200px) {
+    .visible-large-desktop {
+        display: inherit;
+    }
+
+    .hidden-large-desktop {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 979px){
+   body.seattle-home-pro  {
+       padding-top: 10px;
+       
+        .shp-top-nav {
+            margin-top: 10px;
+        }
+
+       .navbar {
+            .nav {
+                position: relative;    
+            }
+            .nav > li {
+                width: 100%;
+                float: right;
+            }
+        }
+
+        .toggle-list .collapse {
+            dt {
+                width: 150px;
+            }
+            dd {
+                margin-left: 10px;
+            }
+        }    
+
+        .nav-collapse .nav > li > a:hover {
+            background-color: #fff;
+        } 
+
+    .nav-collapse {
+
+      .nav > li > a {
+        color: #fff;
+        &:hover {
+            background-color: #fff;
+            color: #397085;
+            .border-radius(0);
+        }
+      }
+
+      &.collapse  {
+        position: absolute;
+        background: #397085;
+        z-index: 1;
+        right: 0;
+        top: 56px;
+        width: 200px;
+        .border-radius(5px);
+      }
+    }
+
+
+    // Inner for background effects
+    .navbar-inner {
+      .container {
+        position: relative;
+      } 
+    }
+
+
+
+
+    }
+}
+@media (max-width: 767px){
+    .contractors {
+        .span2.contractor {
+            width: 33%;
+            float: left;
+        }
+    }
+
+
+    .service-request-form {
+
+        .container {
+            width: 100% !important;
+        }
+        .submit-area {
+            text-align: center;
+        }
+    }
+
+}
+@media (max-width: 480px){
+
+   body.seattle-home-pro {
+       padding-left: 10px !important;       
+       padding-right: 10px !important;       
+ 
+       .navbar .btn-navbar {
+            margin-top: 0px;
+       }
+       .nav-collapse.collapse {
+            top: 28px;
+       }  
+       .service-request-form .control-label, 
+       .schedule-form .control-label, {
+            float: left !important;
+       } 
+   }
+}
+

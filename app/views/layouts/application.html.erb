@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Presentation" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Presentation" %>">
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
-  </head>
-  <body class="<%= controller_name %> <%= action_name %>">
-    <div id="container" class="container">
-      <header>
-        <%= render 'layouts/navigation' %>
-        <%= render 'layouts/messages' %>
-      </header>
-      <div id="main" role="main">
+  <%= render partial: "layouts/application_head" %>
+  <body class="<%= controller_name %> <%= action_name %> seattle-home-pro city-hardware home">
+    <div id="container" class="container ">
         <%= yield %>
-      </div>
-      <footer>
-      </footer>
     </div> <!--! end of #container -->
+    <script src="javascript/jquery.js"></script>
+    <script src="bootstrap-2.3.2/bootstrap/js/bootstrap.js"></script>
+    <script src="javascript/city-hardware/services.js"></script>
   </body>
 </html>
+

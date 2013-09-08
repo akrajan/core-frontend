@@ -76,6 +76,8 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
     ffi (1.8.1)
     figaro (0.6.4)
       bundler (~> 1.0)
@@ -129,6 +131,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.4)
+    multipart-post (1.2.0)
     mysql2 (0.3.11)
     nokogiri (1.5.9)
     polyglot (0.3.3)
@@ -225,6 +228,7 @@ DEPENDENCIES
   database_cleaner (= 1.0.1)
   email_spec
   factory_girl_rails
+  faraday
   figaro
   guard-bundler
   guard-cucumber

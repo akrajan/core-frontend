@@ -1,1 +1,1 @@
-ruby-1.9.3@presentation --create
+rvm use ruby-1.9.3@presentation --create
